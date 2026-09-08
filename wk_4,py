@@ -1,0 +1,70 @@
+with open('logbook.txt', 'w') as f:
+    f.write("kenya high commission\n")
+    f.write("+250052\n")
+    f.write("------------------------\n")
+with open('logbook.txt', 'a') as f:
+    f.write("Eric Muia Nzomo\n")
+    f.write("0791937115\n")
+with open('logbook.txt', 'r') as f:
+            for line in f:
+                print(line.strip())
+
+
+trip = input("Trip 3:Kigali to airport ")
+with open('logbook.txt', 'a') as f:
+    f.write(trip + "\n")
+
+print("Trip saved!")
+
+# Let’s also check what’s inside now
+print("\n--- Your Logbook ---")
+with open('logbook.txt', 'r') as f:
+    for line in f:
+        print(line.strip())
+
+        lines = ["Day 1: 5400", "Day 2: 9100"]
+
+lines = ["Day 1: 5400", "Day 2: 9100"]
+for line in lines:
+    line = line.strip()
+    parts = line.split(": ")
+    day = parts[0]
+    steps = int(parts[1])
+
+    if steps >= 8000:
+         print(f"{day} met the goal with {steps} steps!")
+    else:
+         print(f"{day} did not meet the goal")
+
+
+import io
+
+# Simulated file: one line per day with step count
+weekly_data = """Monday: 9200
+Tuesday: 7500
+Wednesday: 10500
+Thursday: 8800
+Friday: 6900
+Saturday: 12000
+Sunday: 8200"""
+
+# Step 1: Write to a "file" using io.StringIO so it works in browser
+f = io.StringIO()
+f.write(weekly_data)
+f.seek(0) # go back to start of file to read
+
+# Step 2: Read and count days with 8000+ steps
+count = 0
+for line in f:
+    line = line.strip() # remove \n and spaces
+    parts = line.split(": ") # split into ["Monday", "9200"]
+    day = parts[0]
+    steps = int(parts[1]) # convert "9200" to number 9200
+    
+    if steps >= 8000:
+        count += 1
+        print(f"{day}: {steps} steps - Goal met!")
+
+print("\nTotal days with 8000+ steps:", count)
+
+f.close()

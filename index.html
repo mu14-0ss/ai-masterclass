@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI Fitness Coach - REAL</title>
+</head>
+<body>
+<h2>AI Fitness Coach - Day 39 REAL</h2>
+Sleep: <input id="sleep" type="number" value="8"><br><br>
+Stress (1-10): <input id="stress" type="number" value="3"><br><br>
+Caffeine (mg): <input id="caffeine" type="number" value="100"><br><br>
+Soreness (1-10): <input id="soreness" type="number" value="2"><br><br>
+<button onclick="predictPR()">Predict My Day (Real AI)</button>
+<div id="result" style="margin-top:20px; padding:20px; border:2px solid black"></div>
+
+<script>
+async function predictPR() {
+  const sleep = document.getElementById('sleep').value;
+  const stress = document.getElementById('stress').value;
+  const caffeine = document.getElementById('caffeine').value;
+  const soreness = document.getElementById('soreness').value;
+
+  const response = await fetch('http://127.0.0.1:8000/api/checkins', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      sleep_hours: parseFloat(sleep),
+      stress_level: parseInt(stress),
+      caffeine_mg: parseInt(caffeine),
+      soreness_level: parseInt(soreness)
+    })
+  });
+  const data = await response.json();
+  document.getElementById('result').innerHTML = 
+    `<h3>Prediction: ${data.predicted_pr_percent}% PR Chance</h3>
+     <p>Risk: ${data.risk_flag}</p>
+     <p>${data.message}</p>`;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "coin": "bitcoin",
+        "price_usd": 63421,
+        "timestamp": "2026-08-13 22:10:35"
+    },
+    {
+        "coin": "ethereum",
+        "price_usd": 1889.47,
+        "timestamp": "2026-08-13 22:10:35"
+    },
+    {
+        "coin": "solana",
+        "price_usd": 76.17,
+        "timestamp": "2026-08-13 22:10:35"
+    }
+]
