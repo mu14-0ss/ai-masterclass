@@ -1,26 +1,26 @@
 [
     {
         "coin": "BITCOIN",
-        "price_usd": 77055,
-        "change_24h": -0.93,
-        "timestamp": "2026-09-11 15:04:50"
+        "price_usd": 76941,
+        "change_24h": -1.04,
+        "timestamp": "2026-09-11 15:19:05"
     },
     {
         "coin": "ETHEREUM",
-        "price_usd": 2458.31,
-        "change_24h": -0.0,
-        "timestamp": "2026-09-11 15:04:50"
+        "price_usd": 2454.29,
+        "change_24h": -0.13,
+        "timestamp": "2026-09-11 15:19:05"
     },
     {
         "coin": "SOLANA",
-        "price_usd": 99.56,
-        "change_24h": -1.46,
-        "timestamp": "2026-09-11 15:04:50"
+        "price_usd": 99.26,
+        "change_24h": -1.76,
+        "timestamp": "2026-09-11 15:19:05"
     },
     {
         "coin": "CARDANO",
-        "price_usd": 0.20253,
-        "change_24h": -4.66,
-        "timestamp": "2026-09-11 15:04:50"
+        "price_usd": 0.201923,
+        "change_24h": -4.95,
+        "timestamp": "2026-09-11 15:19:05"
     }
 ]
