@@ -1,0 +1,11 @@
+member_id,income,loan_amount,savings,repayment_history_months,previous_defaults,loan_status
+1,45000,200000,50000,24,0,Paid
+2,30000,150000,10000,12,1,Defaulted
+3,80000,300000,100000,36,0,Paid
+4,25000,100000,5000,6,2,Defaulted
+5,60000,250000,60000,30,0,Paid
+6,35000,180000,15000,18,1,Defaulted
+7,90000,400000,120000,40,0,Paid
+8,28000,120000,8000,10,1,Defaulted
+9,70000,280000,80000,28,0,Paid
+10,40000,200000,20000,15,1,Defaulted
